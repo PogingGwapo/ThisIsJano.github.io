@@ -378,6 +378,44 @@ section{
     color: rgba(255, 255, 255, 0.7); /* White placeholder text with some transparency */
 }
 
+/* Top heading for Contact page */
+.contact-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--main-color);
+}
+
+/* Footer (smaller) */
+.contact-footer {
+  background: #121212;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--main-color);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footer-item i {
+  color: var(--main-color);
+  font-size: 1rem;
+}
+
+
 .services {
     background-color: var(--second-bg-color);
     padding: 5rem 10%;
@@ -388,6 +426,7 @@ section{
 .heading {
     font-size: 3rem;
     margin-bottom: 2rem;
+    margin-top: 10rem;
 }
 
 .heading span {
