@@ -7,6 +7,15 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
+document.querySelectorAll('input, textarea').forEach(el => {
+  el.addEventListener('focus', () => {
+    setTimeout(() => {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
+  });
+});
+
+
 // EmailJS form submission
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize EmailJS with your Public Key
