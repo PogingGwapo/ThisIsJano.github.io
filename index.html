@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pogi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 
@@ -82,62 +83,71 @@
 <section class="services" id="Skills">
   <h2 class="heading">My <span>Skills</span></h2>
 
-  <!-- Core Skills Cards -->
-  <div class="core-skills">
-    <div class="core-card">
+
+  <div class="skills-grid">
+
+    <!-- Core Skills -->
+    <div class="skill-card">
+      <i class="fas fa-laptop-code"></i>
       <h3>Web & App Development</h3>
       <p>I build responsive websites and mobile applications using modern tools and frameworks.</p>
     </div>
-    <div class="core-card">
+
+    <div class="skill-card">
+      <i class="fas fa-pencil-ruler"></i>
       <h3>UI/UX Design</h3>
       <p>I design intuitive and visually appealing interfaces that enhance user experience.</p>
     </div>
-    <div class="core-card">
+
+    <div class="skill-card">
+      <i class="fas fa-comments"></i>
       <h3>Effective Communicator</h3>
       <p>I excel at conveying ideas clearly, collaborating effectively, and understanding client needs.</p>
     </div>
-  </div>
 
-  <!-- Skills Progress Bars -->
-  <div class="skills-grid">
-    <div class="skill-box">
+    <!-- Technical Skills -->
+    <div class="skill-card">
+      <i class="fab fa-html5"></i>
       <h3>HTML</h3>
-      <div class="skill-bar"><span style="width: 60%"></span></div>
-      <p>60%</p>
+      <p>Experienced in building structured, semantic, and accessible web pages using HTML5.</p>
     </div>
-    <div class="skill-box">
+
+    <div class="skill-card">
+      <i class="fab fa-css3-alt"></i>
       <h3>CSS</h3>
-      <div class="skill-bar"><span style="width: 70%"></span></div>
-      <p>70%</p>
+      <p>Skilled at creating responsive layouts, animations, and modern designs with CSS3.</p>
     </div>
-    <div class="skill-box">
+
+    <div class="skill-card" >
+      <i class="fab fa-js"></i>
       <h3>JavaScript</h3>
-      <div class="skill-bar"><span style="width: 65%"></span></div>
-      <p>65%</p>
+      <p>Proficient in adding interactivity, DOM manipulation, and working with APIs.</p>
     </div>
-    <div class="skill-box">
+
+    <div class="skill-card">
+      <i class="fab fa-figma"></i>
       <h3>Figma</h3>
-      <div class="skill-bar"><span style="width: 50%"></span></div>
-      <p>50%</p>
+      <p>Experienced in designing user interfaces, prototypes, and wireframes for web and mobile apps.</p>
     </div>
-    <div class="skill-box">
+
+    <div class="skill-card">
+      <i class="fab fa-react"></i>
       <h3>React Native</h3>
-      <div class="skill-bar"><span style="width: 75%"></span></div>
-      <p>75%</p>
+      <p>Capable of building cross-platform mobile apps with smooth UI and native performance.</p>
     </div>
-    <div class="skill-box">
+
+    <div class="skill-card">
+      <i class="fas fa-fire"></i>
       <h3>Firebase</h3>
-      <div class="skill-bar"><span style="width: 50%"></span></div>
-      <p>50%</p>
+      <p>Knowledge of integrating Firebase for authentication, real-time database, and hosting solutions.</p>
     </div>
+
   </div>
 </section>
-
- 
 
 </section>
 <section id="Projects">
-  <h2 class="heading">My <span>Projects</span></h2>
+  <h2 class="heading">My <span class= "span">Projects</span></h2>
   <div class="project-container">
 
     <!-- Jai Coffee App Project Card -->
@@ -159,9 +169,9 @@
         <div class="project-back">
           <h3>Features</h3>
           <p class="description">
-  This coffee shop was founded by Jaireh Marc Infanta, a young entrepreneur from Sinait, Ilocos Sur.
+  A prototype mobile application for Jai-Coffee-Shop using React Native for the front-end aand firebase for the database.
 </p>
-          <ul>
+          <ul class="list">
             <li>Functioning Sign Up / Sign In</li>
             <li>User can add coffee items</li>
             <li>Interactive UI for orders</li>
@@ -179,9 +189,7 @@
 
 <section class="contact" id="contacts"> 
 
-<h2 class="heading">
-  Contact me
-</h2>
+  <h2 class="heading">Contact <span>Me</span></h2>
   <form id="contact-form">
     <div class="input-box">
      <input type="text" name="full_name" placeholder="Full Name" required />
@@ -192,7 +200,7 @@
 
     <div class="input-group-2">
       <textarea name="message" placeholder="Your Message" required></textarea>
-      <input type="submit" value="Send Message" class="btn" />
+      <input type="submit" value="Send Message" class="sendbtn" />
     </div>
   </form>
 

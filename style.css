@@ -9,10 +9,10 @@
 }
 
 :root{
-    --bg-color: #080808;
-    --second-bg-color: #101010;
-    --text-color:rgb(252, 252, 252);
-    --main-color: #b91010;
+    --bg-color: #121212;
+    --second-bg-color: #121212;
+    --text-color:#FFFFFF ;
+    --main-color: #F01212FF;
 
 }
 html {
@@ -39,7 +39,7 @@ body{
     top:0;
     left:0;
     padding: 4rem 15%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--bg-color);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -65,9 +65,9 @@ body{
 }
 span{
     background: linear-gradient(
-        270deg,
-        #862727 10%,
-        #ff1d15 100%
+        250deg,
+        #F30D01FF 10%,
+        #C50606FF 100%
     );
     background-clip: text;
     color: transparent;
@@ -97,8 +97,8 @@ span{
     border-radius: 3rem;
       background: linear-gradient(
         270deg,
-        #672608 10%,
-        #ff1d15 100%);
+        #F30D01FF 10%,
+        #C50606FF 100%);
         letter-spacing: 1px;
         cursor: pointer;
         transition: 0.3 ease-in-out;
@@ -153,7 +153,7 @@ section{
 .home-image img{
   width:25vw;
   border-radius: 50%;
-  box-shadow: 0 0 40px #3a0303 ;
+  box-shadow: 0 0 40px #CF1111FF ;
   margin-top: 5rem;
   transition: 0.4 ease-in-out;
   
@@ -161,9 +161,9 @@ section{
 
 }
 .home-image img:hover{
-      box-shadow: 0 0 40px #a10707 ,
-                  0 0 60px #a10707,
-                   0 0 100px #e83535   ;
+      box-shadow: 0 0 40px #000000FF ,
+                  0 0 60px #E71E10FF,
+                   0 0 100px #CA2510FF   ;
 }
 
 .social-icons a{
@@ -194,8 +194,8 @@ section{
 .btn{
     display: inline-block;
     padding: 1rem 3rem;
-    background-color: rgb(138, 8, 8);
-    box-shadow: 0 0 15px rgb(238, 44, 44);
+    background-color: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
     border-radius: 3rem;
     font-size: 1.8rem; 
     color: rgb(255, 255, 255);
@@ -210,8 +210,8 @@ section{
 }
 
 .btn-group a:nth-of-type(2){
-    background-color: #080808;
-    color: var(--main-color);
+    background-color: #DD0E0EFF;
+    color: #DD0E0EFF;
     border: 2px solid var(--main-color);
     box-shadow: 0 0 25px;
 }
@@ -226,7 +226,7 @@ section{
    justify-content:center;
    align-items: center;
    gap: 10rem;
-   background: var(--second-bg-color)
+   background: var(--bg-color)
 
 }
 .about-img img{
@@ -280,72 +280,81 @@ section{
     background-color: var(--bg-color);
 
 }
-
-.heading{
+.heading {
     text-align: center;
-    font-size: 15rem;
-    margin: 5rem;
-    margin-top: 3.5%;
+    font-size: 5rem;
+    margin: 5rem 0 3rem;
+    color: var(--text-color);
 }
+
 .services {
-    background-color: var(--second-bg-color);
-    padding: 5rem 15%;
+    background-color: var(--bg-color);
+    padding: 5rem 10%;
     color: var(--text-color);
     text-align: center;
-    scroll-margin: 80px
+    scroll-margin: 80px;
 }
 
-.skills-container {
-    max-width: 800px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    margin-top: 3rem;
 }
 
-.skill-box {
-    text-align: left;
+.skill-card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skill-box h3 {
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Brand Colors */
+.skill-card .fa-html5 { color: #E34F26; }   /* HTML orange */
+.skill-card .fa-css3-alt { color: #1572B6; } /* CSS blue */
+.skill-card .fa-js { color: #F7DF1E; }      /* JavaScript yellow */
+.skill-card .fa-figma { color: #F24E1E; }   /* Figma red-orange */
+.skill-card .fa-react { color: #61DAFB; }   /* React cyan */
+.skill-card .fa-fire { color: #FFCA28; }    /* Firebase yellow */
+
+/* Neutral Icons for Core Skills */
+.skill-card .fa-laptop-code { color: #1534CFFF; } 
+.skill-card .fa-pencil-ruler { color: #9C27B0; } 
+.skill-card .fa-comments { color: #4CAF50; } 
+
+
+.skill-card h3 {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
 }
 
-.skill-bar {
-    width: 100%;
-    background: #333;
-    border-radius: 1rem;
-    overflow: hidden;
-    height: 20px;
-    margin-bottom: 0.5rem;
-}
-
-.skill-bar span {
-    display: block;
-    height: 100%;
-    background: var(--main-color);
-    border-radius: 1rem;
-    animation: fill-bar 1.5s ease-in-out forwards;
-}
-
-.skill-box p {
+.skill-card p {
     font-size: 1.4rem;
-    font-weight: bold;
-    color: var(--main-color);
+    line-height: 1.6;
+    color: var(--text-color);
 }
 
-@keyframes fill-bar {
-    from {
-        width: 0;
-    }
-}
 
 .contact {
     background-color: var(--bg-color);
 }
 
+
 .contact h2 {
+    margin-top: 3rem;
     margin-bottom: 3rem;
     color: var(--text-color);
 }
@@ -386,35 +395,19 @@ section{
   color: var(--main-color);
 }
 
-/* Footer (smaller) */
-.contact-footer {
-  background: #121212;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  border-top: 1px solid var(--main-color);
+.sendbtn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+    border-radius: 3rem;
+    font-size: 1.8rem; 
+    color: rgb(255, 255, 255);
+    border: 2px solid transparent;
+    font-weight: 500;
+    transition: 0.3s ease-in-out
+    
 }
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footer-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.footer-item i {
-  color: var(--main-color);
-  font-size: 1rem;
-}
-
 
 .services {
     background-color: var(--second-bg-color);
@@ -490,10 +483,13 @@ input, textarea {
 }
 
 .heading {
-    font-size: 3rem;
+    font-size: 5rem;
     margin-bottom: 3rem;
-    color: var(--main-color);
+    margin-top: 3rem;
+    color: #FFFFFFFF;
 }
+
+
 
 .project-container {
     display: flex;
@@ -534,14 +530,12 @@ input, textarea {
 
 .project-back p.description {
   margin-top: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-style: italic;
   color: rgba(255, 255, 255, 0.85); /* slightly transparent white */
   line-height: 1.5;
   text-align: left;
 }
-
-
 
 
 
@@ -588,6 +582,15 @@ input, textarea {
 .project-back li {
     margin-bottom: 0.8rem;
     font-size: 1.4rem;
+}
+
+.list{
+
+}
+.btn{
+    border-color:#C90606FF;
+    background-color:#121212;
+
 }
 
 
